@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Slot Machine with Knives</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#slotMachine">Slot Machine</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+
+    <header id="slotMachine">
+        <h1>CS2 Knife Slot Machine</h1>
+        <div class="slot-machine">
+            <div class="slot">
+                <img id="slot1" src="knife1.png" alt="Knife">
+            </div>
+            <div class="slot">
+                <img id="slot2" src="knife1.png" alt="Knife">
+            </div>
+            <div class="slot">
+                <img id="slot3" src="knife1.png" alt="Knife">
+            </div>
+        </div>
+        <button id="spinButton">Spin</button>
+    </header>
+    
+
+    <section id="about">
+        <h2>About</h2>
+        <p>Tässä on simppeli cs2 puukko (hedelmäpeli)</p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+nav {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+header {
+  text-align: center;
+  padding: 50px;
+}
+
+.slot-machine {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.slot {
+  width: 470px;
+  height: 470px;
+  margin: 0 10px;
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+@media screen and (max-width: 768px) {
+  .slot-machine {
+      flex-direction: column;
+  }
+
+  .slot {
+      width: 80px;
+      height: 80px;
+  }
+
+  button {
+      width: 100%;
+  }
+}
+  </style>
+
+  <footer>
+    <p>&copy; 2025 My Single Page</p>
+  </footer>
+
+  <script>
+  document.getElementById('spinButton').addEventListener('click', function() {
+  const knives = ['knife1.png', 'knife2.png', 'knife3.png']; // Puukko kuvat
+  const slot1 = document.getElementById('slot1');
+  const slot2 = document.getElementById('slot2');
+  const slot3 = document.getElementById('slot3');
+
+  // Randomisti valitaan puukko joka slottiin
+  slot1.src = knives[Math.floor(Math.random() * knives.length)];
+  slot2.src = knives[Math.floor(Math.random() * knives.length)];
+  slot3.src = knives[Math.floor(Math.random() * knives.length)];
+});
+
+  </script>
+</body>
+</html>
