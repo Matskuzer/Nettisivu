@@ -30,118 +30,114 @@
         </div>
         <button id="spinButton">Spin</button>
     </header>
-    
 
     <section id="about">
         <h2>About</h2>
-        <p>Tässä on simppeli cs2 puukko (hedelmäpeli)</p>
+        <p>Tässä on simppeli CS2 puukko (hedelmäpeli)</p>
     </section>
 
-    <script src="script.js"></script>
-</body>
-</html>
-  <style>
-    * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    <footer>
+        <p>&copy; 2025 My Single Page</p>
+    </footer>
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-nav {
-  background-color: #333;
-  color: white;
-  padding: 10px;
-}
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
 
-nav ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-}
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
 
-nav ul li {
-  margin: 0 20px;
-}
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
 
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-}
+        nav ul li {
+            margin: 0 20px;
+        }
 
-header {
-  text-align: center;
-  padding: 50px;
-}
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
 
-.slot-machine {
-  display: flex;
-  justify-content: center;
-  margin: 20px;
-}
+        header {
+            text-align: center;
+            padding: 50px;
+        }
 
-.slot {
-  width: 470px;
-  height: 470px;
-  margin: 0 10px;
-  background-color: #ddd;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+        .slot-machine {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
 
-button {
-  padding: 10px 20px;
-  font-size: 18px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
-  margin-top: 20px;
-}
+        .slot {
+            width: 470px;
+            height: 470px;
+            margin: 0 10px;
+            background-color: #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-button:hover {
-  background-color: #45a049;
-}
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
 
-@media screen and (max-width: 768px) {
-  .slot-machine {
-      flex-direction: column;
-  }
+        button:hover {
+            background-color: #45a049;
+        }
 
-  .slot {
-      width: 80px;
-      height: 80px;
-  }
+        @media screen and (max-width: 768px) {
+            .slot-machine {
+                flex-direction: column;
+            }
 
-  button {
-      width: 100%;
-  }
-}
-  </style>
+            .slot {
+                width: 80px;
+                height: 80px;
+            }
 
-  <footer>
-    <p>&copy; 2025 My Single Page</p>
-  </footer>
+            button {
+                width: 100%;
+            }
+        }
+    </style>
 
-  <script>
-  document.getElementById('spinButton').addEventListener('click', function() {
-  const knives = ['knife1.png', 'knife2.png', 'knife3.png']; // Puukko kuvat
-  const slot1 = document.getElementById('slot1');
-  const slot2 = document.getElementById('slot2');
-  const slot3 = document.getElementById('slot3');
+    <script>
+        document.getElementById('spinButton').addEventListener('click', function() {
+            const knives = ['knife1.png', 'knife2.png', 'knife3.png']; // Puukko kuvat
+            const slot1 = document.getElementById('slot1');
+            const slot2 = document.getElementById('slot2');
+            const slot3 = document.getElementById('slot3');
 
-  // Randomisti valitaan puukko joka slottiin
-  slot1.src = knives[Math.floor(Math.random() * knives.length)];
-  slot2.src = knives[Math.floor(Math.random() * knives.length)];
-  slot3.src = knives[Math.floor(Math.random() * knives.length)];
-});
+            // Randomisti valitaan puukko joka slottiin
+            slot1.src = knives[Math.floor(Math.random() * knives.length)];
+            slot2.src = knives[Math.floor(Math.random() * knives.length)];
+            slot3.src = knives[Math.floor(Math.random() * knives.length)];
+        });
+    </script>
 
-  </script>
 </body>
 </html>
